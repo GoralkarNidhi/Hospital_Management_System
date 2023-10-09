@@ -1,0 +1,231 @@
+.footer.bg-image {
+    background-image: url(https://jthemes.net/themes/html/medservices/files/images/footer-bg.jpg);
+    width: 100%;
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+}
+.wide-40 {
+    padding-top: 100px;
+    padding-bottom: 40px;
+}
+.mb-40 {
+    margin-bottom: 40px;
+}
+.footer.bg-image .footer-box p, .footer.bg-image .footer-info p, .footer.bg-image .footer-links li a, .footer.bg-image p.footer-copyright {
+    color: #c5d1dc;
+}
+p.p-sm {
+    font-size: 0.95rem;
+}
+.mt-20 {
+    margin-top: 20px;
+}
+.foo-socials {
+    display: inline-block;
+    padding-left: 0;
+    margin: 0 auto 0;
+}
+.text-center {
+    text-align: center!important;
+}
+.foo-socials li {
+    width: auto !important;
+    display: inline-block !important;
+    vertical-align: top;
+    clear: none !important;
+    margin: 0 0 8px 0;
+    padding: 0;
+}
+.footer.bg-image .foo-socials a {
+    border: 2px solid #c5d1dc;
+    color: #c5d1dc;
+}
+.foo-socials a {
+    display: block;
+    background-color: transparent;
+    border: 2px solid #666;
+    width: 36px;
+    height: 36px;
+    color: #666;
+    font-size: 16px;
+    line-height: 34px!important;
+    margin-right: 4px;
+    -webkit-border-radius: 100%;
+    -moz-border-radius: 100%;
+    border-radius: 100%;
+}
+.page-banner-area {
+    background-image: url(https://templates.envytheme.com/bexi/default/assets/images/page-bg/bg-1.jpg);
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+    z-index: 1;
+}
+
+.pt-100 {
+    padding-top: 100px;
+}
+.page-banner-area::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 87, 184, 0.5);
+    z-index: -1;
+}
+.page-banner-content {
+    background-color: rgba(255, 255, 255, 0.8);
+    padding: 75px 95px;
+    border-radius: 15px 15px 0 0;
+    display: inline-block;
+}
+.page-banner-content h2 {
+    font-weight: 800;
+    font-size: 80px;
+    line-height: 90px;
+    margin-bottom: 15px;
+}
+.page-banner-content ul {
+    padding-left: 0;
+    margin-bottom: 0;
+    list-style-type: none;
+}
+.page-banner-content ul li:first-child {
+    margin-left: 0;
+}
+.page-banner-content ul li {
+    display: inline-block;
+    font-weight: 600;
+    font-size: 15px;
+    margin-left: 30px;
+    position: relative;
+}
+.ptb-100 {
+    padding-top: 100px;
+    padding-bottom: 100px;
+}
+.pb-100 {
+    padding-bottom: 100px;
+}
+
+.appointments-form {
+    /* background-color: #f5f7fa; */
+    background-image: url(https://img.freepik.com/premium-photo/there-is-picture-blue-pink-background-with-blurry-background-generative-ai_902338-27517.jpg);
+    padding: 112px 100px;
+    background-repeat: no-repeat;
+    background-size: cover;
+    border-radius: 20px;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+.appointments-form h2 {
+    font-size: 35px;
+    margin-bottom: 30px;
+}
+.appointments-form .form-group {
+    margin-bottom: 30px;
+}
+.appointments-form .form-group label {
+    margin-bottom: 8px;
+    font-size: 14px;
+    font-weight: 600;
+    letter-spacing: 0.08em;
+}
+
+label {
+    display: inline-block;
+}
+.appointments-form .form-group .form-control {
+    background-color: #ffffff;
+}
+.form-control {
+    height: 55px;
+    color: #111111;
+    border: 1px solid #e5e5e5;
+    background-color: rgba(241, 247, 248, 0.5);
+    font-size: 16px;
+    padding: 10px 20px;
+    width: 100%;
+    -webkit-transition: all ease 0.5s;
+    transition: all ease 0.5s;
+    border-radius: 5px;
+}
+.form-control {
+    display: block;
+    width: 100%;
+    padding: 0.375rem 0.75rem;
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 1.5;
+    color: #212529;
+    background-color: #fff;
+    background-clip: padding-box;
+    border: 1px solid #ced4da;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    border-radius: 0.375rem;
+    transition: border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+}
+.appointments-form ul {
+    padding-left: 0;
+    margin-bottom: 30px;
+    list-style-type: none;
+}
+.appointments-form .form-group {
+    margin-bottom: 30px;
+}
+
+.appointments-form .form-group .form-control {
+    background-color: #ffffff;
+}
+textarea.form-control {
+    height: auto;
+}
+textarea.form-control {
+    min-height: calc(1.5em + 0.75rem + 2px);
+}
+.form-control {
+    height: 55px;
+    color: #111111;
+    border: 1px solid #e5e5e5;
+    background-color: rgba(241, 247, 248, 0.5);
+    font-size: 16px;
+    padding: 10px 20px;
+    width: 100%;
+    -webkit-transition: all ease 0.5s;
+    transition: all ease 0.5s;
+    border-radius: 5px;
+}
+.appointments-form ul li {
+    display: inline-block;
+    margin-right: 30px;
+}
+.appointments-form .default-btn {
+    width: 100%;
+    display: block;
+}
+.default-btn.active {
+    background-color: #091c47;
+    border-color: #091c47;
+    color: #ffffff;
+}
+.appointments-form ul li span {
+    font-weight: 600;
+    font-size: 14px;
+    letter-spacing: 0.08em;
+}
+.appointments-form .default-btn {
+    width: 100%;
+    display: block;
+}
+
+.default-btn.active {
+    background-color: #091c47;
+    border-color: #091c47;
+    color: #ffffff;
+}

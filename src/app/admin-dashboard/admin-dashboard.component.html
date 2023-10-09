@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0">
+    <link rel="shortcut icon" type="image/x-icon" href="/src/assets/img/favicon.png">
+    <title>Chikitsaalay</title>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+    <link rel="stylesheet" type="text/css" href="/src/assets/css/bootstrap.min.css">
+
+    <link rel="stylesheet" href="/src/assets/plugins/fontawesome/css/fontawesome.min.css">
+    <link rel="stylesheet" href="/src/assets/plugins/fontawesome/css/all.min.css">
+
+    <link rel="stylesheet" type="text/css" href="/src/assets/css/select2.min.css">
+
+    <link rel="stylesheet" href="/src/assets/plugins/datatables/datatables.min.css">
+
+    <link rel="stylesheet" href="/src/assets/plugins/feather/feather.css">
+
+    <link rel="stylesheet" type="text/css" href="/src/assets/css/style.css">
+</head>
+
+<body>
+
+
+    <div class="main-wrapper">
+        <div class="header">
+            <div class="header-left">
+                <a routerLink="/home" class="logo">
+                    <img src="https://preclinic.dreamguystech.com/template/assets/img/logo.png" width="35" height="35"
+                        alt> <span>Chikitsaalay</span>
+                </a>
+            </div>
+          
+
+            <div class="top-nav-search mob-view">
+                <ul class="nav user-menu float-end">
+              
+                  
+                    <li class="nav-item dropdown has-arrow user-profile-list">
+                        <a routerLink="/admin-dashboard" class="dropdown-toggle nav-link user-link" data-bs-toggle="dropdown">
+                            <div class="user-names">
+                                <h5>{{admin.userName}}</h5>
+                                <span>Admin</span>
+                            </div>
+                            <span class="user-img">
+                                <img src="assets/img/user.jpg" alt="Admin">
+                            </span>
+                        </a>
+                       
+                    </li>
+                  
+                </ul>
+            </div>
+
+
+        </div>
+        <div class="sidebar" id="sidebar">
+            <div class="sidebar-inner slimscroll">
+                <div id="sidebar-menu" class="sidebar-menu">
+                    <ul>
+                        <li class="menu-title">Main</li>
+                        <li class="submenu">
+                            <a routerLink="/admin-dashboard">
+                                <span class="menu-side">
+                                    <img src="https://preclinic.dreamguystech.com/template/assets/img/icons/menu-icon-01.svg"
+                                        alt>
+                                </span>
+                                <span style="font-weight: bolder; color: #2e37a4;">
+                                    Admin Dashboard
+                                </span>
+                            </a>
+
+                        </li>
+                        <li class="submenu">
+                            <a routerLink="/doctor-list-dash"><span class="menu-side">
+                                    <img src="https://preclinic.dreamguystech.com/template/assets/img/icons/menu-icon-02.svg"
+                                        alt>
+                                </span> <span style="font-weight: bolder; color: #2e37a4;"> Doctors </span>
+                            </a>
+
+                        </li>
+                        <li class="submenu">
+                            <a routerLink="/patient-list-dash"><span class="menu-side"><img
+                                        src="https://preclinic.dreamguystech.com/template/assets/img/icons/menu-icon-03.svg"
+                                        alt></span>
+                                <span style="font-weight: bolder; color: #2e37a4;">Patients </span> </a>
+                            
+                        </li>
+
+                        <li class="submenu">
+                            <a routerLink="/appointment-list-dash"><span class="menu-side"><img
+                                        src="https://preclinic.dreamguystech.com/template/assets/img/icons/menu-icon-04.svg"
+                                        alt></span>
+                                <span style="font-weight: bolder; color: #2e37a4;"> Appointments </span>
+                            </a>
+                           
+                        </li>
+                       
+                    </ul>
+                    <div class="logout-btn">
+                        <a routerLink="/home"><span class="menu-side"><img
+                                    src="https://preclinic.dreamguystech.com/template/assets/img/icons/logout.svg"
+                                    alt></span> <span>Logout</span></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="page-wrapper">
+            <div class="content">
+
+                <div class="page-header">
+                    <div class="row">
+                        <div class="col-sm-12">
+                            <ul class="breadcrumb">
+                                <li class="breadcrumb-item"><a href="index.html"
+                                        style="font-size: 15px; font-weight: bold;">Dashboard >></a></li>
+                                <li class="breadcrumb-item"><i class="feather-chevron-right"></i></li>
+                                <li class="breadcrumb-item active" style="font-size: 15px; font-weight: bold;">Admin
+                                    Dashboard</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="good-morning-blk">
+                    <div class="row">
+                        <div class="col-md-6">
+                            <div class="morning-user">
+                                <h2>Welcome <span>Admin</span></h2>
+                                <h2>Hello, <span>{{admin.userName}}</span>
+                                </h2>
+                                <p style="font-size: 15px; font-weight: 700;">Have a nice day at work</p>
+                            </div>
+                        </div>
+                        <div class="col-md-6 position-blk">
+                            <div class="morning-img">
+                                <img src="http://cdn.edubridgeindia.com/scorm/OHS01/mobile/6BaK8Dl6eyl_80_P_71_323_1928_1359.jpg"
+                                    style="width: 33%; margin-left: 50%;" alt>
+                            </div>
+                        </div>
+                    </div>
+                    <br>
+                   
+                </div>
+
+
+
+            </div>
+        </div>
+    </div>
+
+
+
+
+
+    <div class="sidebar-overlay" data-reff></div>
+
+    <script src="assets/js/jquery-3.6.1.min.js"></script>
+
+    <script src="assets/js/bootstrap.bundle.min.js"></script>
+
+    <script src="assets/js/feather.min.js"></script>
+
+    <script src="assets/js/jquery.slimscroll.js"></script>
+
+    <script src="assets/js/select2.min.js"></script>
+
+    <script src="assets/plugins/datatables/jquery.dataTables.min.js"></script>
+    <script src="assets/plugins/datatables/datatables.min.js"></script>
+
+    <script src="assets/js/jquery.waypoints.js"></script>
+    <script src="assets/js/jquery.counterup.min.js"></script>
+
+    <script src="assets/plugins/apexchart/apexcharts.min.js"></script>
+    <script src="assets/plugins/apexchart/chart-data.js"></script>
+
+    <script src="assets/js/app.js"></script>
+</body>
+
+
+
+</html>

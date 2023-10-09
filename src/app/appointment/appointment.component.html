@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://kit.fontawesome.com/baaf710a5e.js" crossorigin="anonymous"></script>
+     <!-- Favicons -->
+  <link href="https://bootstrapmade.com/demo/templates/FlexStart/assets/img/favicon.png" rel="icon">
+  <link href="https://bootstrapmade.com/demo/templates/FlexStart/assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Nunito:300,300i,400,400i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
+
+  <!-- Vendor CSS Files -->
+  <link href="https://bootstrapmade.com/assets/vendor/aos/aos.css" rel="stylesheet">
+  <link href="https://bootstrapmade.com/assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://bootstrapmade.com/assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+  <link href="https://bootstrapmade.com/assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
+  <link href="https://bootstrapmade.com/assets/vendor/remixicon/remixicon.css" rel="stylesheet">
+  <link href="https://bootstrapmade.com/assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+
+  <!-- Template Main CSS File -->
+  <link href="https://bootstrapmade.com/demo/templates/FlexStart/assets/css/style.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
+
+</head>
+<body>
+
+
+    <header id="header" class="header fixed-top">
+        <div class="container-fluid container-xl d-flex align-items-center justify-content-between">
+    
+            <a routerLink="/home" class="logo">
+            <img src="assets/img/logo.png" alt="">
+            <span>
+                Chikitsaalay</span>
+          </a>
+    
+          <nav id="navbar" class="navbar">
+            <ul>
+              <li><a class="nav-link scrollto active" routerLink="/home">Home</a></li>
+              <li><a class="nav-link scrollto" routerLink="/about-us">About us</a></li>
+              <li><a class="getstarted scrollto" routerLink="/appointment">Book Appointment</a></li>
+              <li><a class="getstarted scrollto" routerLink="/app-login">Login / Register</a></li>
+            </ul>
+            <i class="bi bi-list mobile-nav-toggle"></i>
+          </nav><!-- .navbar -->
+    
+        </div>
+      </header><!-- End Header -->
+    
+
+      <div class="w3-content" style="max-width:1564px">
+    
+    
+    </div>
+    
+    
+    <div class="page-banner-area bg-8 pt-100" style="margin-top: 100px;"> 
+        <div class="container">
+            <div class="page-banner-content">
+                <h2>Appointment</h2>
+                <ul>
+                    <li>
+                        <a href="index.html">
+                          
+                            Home 
+                        </a>
+                    </li>
+                    &nbsp; &nbsp;
+                    <svg xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 448 512"><!--! Font Awesome Free 6.4.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. --><path d="M438.6 278.6c12.5-12.5 12.5-32.8 0-45.3l-160-160c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3L338.8 224 32 224c-17.7 0-32 14.3-32 32s14.3 32 32 32l306.7 0L233.4 393.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0l160-160z"/></svg>
+                    <li>
+                        <span>Appointment</span>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    
+    
+
+
+
+    <div class="appointments-area ptb-100">
+        <div class="container">
+           
+
+            <div class="appointments-form">
+                <h2>Patient information</h2>
+
+                <form (ngSubmit)="addAppointment()">
+                    <div class="row">
+                        <div class="col-lg-6 col-md-6">
+                            <div class="form-group">
+                                <label>YOUR FULL NAME</label>
+                                <input type="text" class="form-control"
+                                 placeholder="Your Full Name here"  
+                                 [(ngModel)]="appointment.fullName"
+                                 name="appointmentFullName" id="appointmentFullName"
+                                 >
+                            </div>
+                        </div>
+                       
+                        <div class="col-lg-6 col-md-6">
+                            <div class="form-group">
+                                <label>ADDRESS</label>
+                                <input type="text" class="form-control" 
+                                placeholder="your address here"
+                                [(ngModel)]="appointment.address" 
+                                name="appointmentAddress" id="appointmentAddress">
+                            </div>
+                        </div>
+                       
+                        <div class="col-lg-6 col-md-6">
+                            <div class="form-group">
+                                <label>CHOOSE DOCTOR NAME</label>
+                                <select class="form-select form-control" 
+                                aria-label="Default select example" name="doctName"  
+                                [(ngModel)]="appointment.doctName" (change)="readId($event)" >
+                                <option *ngFor="let doctor of doctorList" 
+                                value="{{doctor.doctorId}}">{{doctor.doctName}}</option>
+                                  
+                                </select>
+                            </div>
+                        </div>
+                        <div class="col-lg-6 col-md-6">
+                            <div class="form-group">
+                                <label>SELECT DEPARTMENT</label>
+                                <select class="form-select form-control" 
+                                aria-label="Default select example" name="department"
+                                [(ngModel)]="appointment.department">
+                                    <option *ngFor="let doctor of doctorList" 
+                                    value="{{doctor.department}}">{{doctor.department}}</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="col-lg-6 col-md-6">
+                            <div class="form-group">
+                                <label>PATIENT TYPE</label>
+                                <select class="form-select form-control" 
+                                aria-label="Default select example"  
+                                name="patientType"  [(ngModel)]="appointment.patientType">
+                                    <option *ngFor="let patient of patientList" 
+                                    value="{{patient.patientType}}">{{patient.patientType}}</option>
+                                 
+                                </select>
+                            </div>
+                        </div>
+                        <div class="col-lg-6 col-md-6">
+                            <div class="form-group">
+                                <label>EMAIL</label>
+                                <input type="email" class="form-control" 
+                                placeholder="Sonamk@gmail.com"
+                                [(ngModel)]="appointment.emailId"
+                                name="appointmentEmailId" id="appointmentEmailId" >
+                            </div>
+                        </div>
+                        <div class="col-lg-6 col-md-6">
+                            <div class="form-group">
+                                <label>PHONE</label>
+                                <input type="text" class="form-control" 
+                                placeholder=""
+                                [(ngModel)]="appointment.mobileNo"
+                                name="appointmentMobileNo" id="appointmentMobileNo">
+                            </div>
+                        </div>
+                        <!-- <div class="col-lg-6 col-md-6">
+                            <div class="form-group">
+                                <label>DATE OF BIRTH </label>
+                                <input type="date" class="form-control">
+                            </div>
+                        </div> -->
+                        <div class="col-lg-6 col-md-6">
+                            <div class="form-group">
+                                <label>DATE</label>
+                                <input type="date" min={{currentDate}} class="form-control"
+                                [(ngModel)]="appointment.date"
+                                name="appointmentDate">
+                            </div>
+                        </div>
+                        <!-- <div class="col-lg-6 col-md-6">
+                            <div class="form-group">
+                                <label>Time</label>
+                                <input type="time" class="form-control"
+                                [(ngModel)]="appointment.fullName">
+                            </div>
+                        </div> -->
+                        <!-- <div class="col-lg-12">
+                            <div class="form-group">
+                                <label>APPOINTMENT NOTE</label>
+                                <textarea class="form-control" cols="30" rows="10" placeholder="Reason for appointment"></textarea>
+                            </div>
+                        </div> -->
+
+                        
+
+                        <div class="col-lg-12">
+                            <button type="submit" class="default-btn active" fdprocessedid="xs9rfm">
+                                Make an appointment
+                            </button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+
+
+
+     
+           
+    <footer id="footer-1" class="bg-image wide-40 footer division" style="color: white; font-family: Nunito, sans-serif;">
+        <div class="container">
+      
+      
+            <!-- FOOTER CONTENT -->
+            <div class="row">	
+      
+      
+                <!-- FOOTER INFO -->
+                <div class="col-md-6 col-lg-3">
+                    <div class="footer-info mb-40">
+      
+                        <!-- Footer Logo -->
+                        
+                        <img src="assets/img/logo.png" style="    width: 25%;" width="180" height="40" alt="footer-logo">
+                        <h6 style="color: white; font-family: Nunito, sans-serif; font-weight: bolder;">	Chikitsaalay</h6>
+                        <!-- Text -->	
+                        <p class="p-sm mt-20" style="font-weight: bolder;">Best Multi-Speciality Hospital for Women and Children in India
+                        </p>  
+      
+                        
+                    
+                    </div>		
+                </div>
+      
+      
+                <!-- FOOTER CONTACTS -->
+                <div class="col-md-6 col-lg-3">
+                    <div class="footer-box mb-40">
+                    
+                        <!-- Title -->
+                        <h5 class="h5-xs" style="font-weight: bolder;">Our Location</h5>
+      
+                        <!-- Address -->
+                        <p style="font-weight: bolder;">Pimpri Chinchwad</p> 
+                        <p style="font-weight: bolder;">Near PCMC Bhavan, Pune</p>
+                        
+                        <!-- Email -->
+                        <p class="foo-email mt-20" style="font-weight: bolder;">Email: 
+                          <a href="mailto:yourdomain@mail.com">chikitsaalayhospital@gmail.com</a></p>
+      
+                        <!-- Phone -->
+                        <p style="font-weight: bolder;">Phone: +91 12344556</p>
+      
+                    </div>
+                </div>
+      
+      
+                <!-- FOOTER WORKING HOURS -->
+                <div class="col-md-6 col-lg-3">
+                    <div class="footer-box mb-40">
+                    
+                        <!-- Title -->
+                        <h5 class="h5-xs">Working Time</h5>
+      
+                        <!-- Working Hours -->
+                        <p class="p-sm" style="font-weight: bolder;">Mon - Wed - <span>9:00 AM - 7:00 PM</span></p>
+                        <p class="p-sm" style="font-weight: bolder;">Thursday - <span>9:00 AM - 6:30 PM</span></p>
+                        <p class="p-sm" style="font-weight: bolder;">Friday - <span>9:00 AM - 6:00 PM</span></p>
+                        <p class="p-sm" style="font-weight: bolder;">Sat - Sun - <span>Closed</span></p>										
+      
+                    </div>
+                </div>
+      
+      
+                <!-- FOOTER PHONE NUMBER -->
+                <div class="col-md-6 col-lg-3">
+                    <div class="footer-box mb-40">
+                                        
+                        <!-- Title -->
+                        <h5 class="h5-xs" style="font-weight: bolder;">Emergency Cases</h5>
+      
+                        <!-- Footer List -->
+                        <h5 class="h5-xl blue-color" style="font-weight: bolder;">+91 12344556</h5>
+      
+                        <!-- Text -->	
+                        <p class="p-sm mt-15" style="font-weight: bolder;">Please feel welcome to contact our friendly reception staff with any general or medical enquiry. Our doctors will receive or return any urgent calls.
+                        </p> 																												
+      
+                    </div>
+                </div>	
+      
+      
+            </div>	  <!-- END FOOTER CONTENT -->
+      
+      
+            <!-- FOOTER COPYRIGHT -->
+            <div class="bottom-footer">
+                <div class="row">
+                    <div class="col-md-12">
+                        <p class="footer-copyright" style="text-align: center; font-weight: bolder;">© 2023 <span>Sonam Machindra Kusalkar</span>. All Rights Reserved</p>
+                    </div>
+                </div>
+            </div>
+      
+      
+        </div>	   <!-- End container -->										
+      </footer>
+      
+</body>
+</html>

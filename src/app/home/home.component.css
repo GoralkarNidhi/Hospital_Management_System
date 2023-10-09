@@ -1,0 +1,57 @@
+.footer.bg-image {
+    background-image: url(https://jthemes.net/themes/html/medservices/files/images/footer-bg.jpg);
+    width: 100%;
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+}
+.wide-40 {
+    padding-top: 100px;
+    padding-bottom: 40px;
+}
+.mb-40 {
+    margin-bottom: 40px;
+}
+.footer.bg-image .footer-box p, .footer.bg-image .footer-info p, .footer.bg-image .footer-links li a, .footer.bg-image p.footer-copyright {
+    color: #c5d1dc;
+}
+p.p-sm {
+    font-size: 0.95rem;
+}
+.mt-20 {
+    margin-top: 20px;
+}
+.foo-socials {
+    display: inline-block;
+    padding-left: 0;
+    margin: 0 auto 0;
+}
+.text-center {
+    text-align: center!important;
+}
+.foo-socials li {
+    width: auto !important;
+    display: inline-block !important;
+    vertical-align: top;
+    clear: none !important;
+    margin: 0 0 8px 0;
+    padding: 0;
+}
+.footer.bg-image .foo-socials a {
+    border: 2px solid #c5d1dc;
+    color: #c5d1dc;
+}
+.foo-socials a {
+    display: block;
+    background-color: transparent;
+    border: 2px solid #666;
+    width: 36px;
+    height: 36px;
+    color: #666;
+    font-size: 16px;
+    line-height: 34px!important;
+    margin-right: 4px;
+    -webkit-border-radius: 100%;
+    -moz-border-radius: 100%;
+    border-radius: 100%;
+}
